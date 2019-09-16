@@ -1,0 +1,6 @@
+C:\Users\matia\OneDrive\Escritorio\programacion2\TP_1\Entidades\Entidades\bin\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Escritorio\programacion2\TP_1\Entidades\Entidades\bin\Debug\Entidades.pdb
+C:\Users\matia\OneDrive\Escritorio\programacion2\TP_1\Entidades\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\matia\OneDrive\Escritorio\programacion2\TP_1\Entidades\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Escritorio\programacion2\TP_1\Entidades\Entidades\obj\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Escritorio\programacion2\TP_1\Entidades\Entidades\obj\Debug\Entidades.pdb
