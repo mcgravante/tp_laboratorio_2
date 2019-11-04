@@ -91,6 +91,7 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Métodos
+        override
         public string ToString()
         {
             return "a completar";

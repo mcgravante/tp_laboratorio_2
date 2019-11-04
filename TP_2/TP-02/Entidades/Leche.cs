@@ -14,7 +14,7 @@ namespace Entidades_2018
         #endregion
 
         #region "Atributos"
-        private ETipo tipo;
+        private ETipo tipo = ETipo.Entera;
         #endregion
 
         #region "Constructores"
@@ -25,12 +25,8 @@ namespace Entidades_2018
         /// <param name="patente"></param>
         /// <param name="color"></param>
         public Leche(EMarca marca, string codigo, ConsoleColor color)
-            : base(codigo, marca, color)
-        {
-            this.tipo = ETipo.Entera;
-        }
-        //Da lo mismo si reutilizo código en este caso, porque usando el constructor por defecto asigno
-        //un valor al tipo de leche que luego reasigno. Pero me gusta reutilizar código igual.
+            : base(codigo, marca, color) { }
+
         public Leche(EMarca marca, string codigo, ConsoleColor color, ETipo tipo)
             : this(marca, codigo, color)
         {

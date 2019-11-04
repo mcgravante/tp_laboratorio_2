@@ -41,7 +41,6 @@ namespace EntidadesAbstractas
             return true;
         }
 
-
         public static bool operator !=(Universitario pg1, Universitario pg2)
         {
             return !(pg1 == pg2);
