@@ -111,12 +111,34 @@ namespace Entidades
         }
         #endregion
 
-        #region Enumaradores
+        #region Métodos
+        public static bool Guardar(Universidad uni)
+        {
+            return true;
+        }
+
+        public static Universidad Leer()
+        {
+            return new Universidad();
+        }
+
+        private string MostrarDatos(Universidad uni)
+        {
+            return "a completar";
+        }
+
+        override
+        public string ToString()
+        {
+            return "a completar";
+        }
+        #endregion
+
+        #region Enumeradores
         public enum EClases
         {
             Programacion, Laboratorio, Legislacion, SPD
         }
         #endregion
-
     }
 }

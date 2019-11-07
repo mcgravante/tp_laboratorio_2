@@ -10,7 +10,7 @@ namespace Entidades
     public sealed class Profesor : Universitario
     {
         #region Campos
-        private static Queue<EClases> clasesDelDia;
+        private static Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
         #endregion
 
@@ -23,10 +23,10 @@ namespace Entidades
         private Profesor() : base()
         { }
 
-        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad) 
+        public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : base(id, nombre, apellido, dni, nacionalidad)
         {
-            clasesDelDia = new Queue<EClases>;
+            clasesDelDia = new Queue<Universidad.EClases>();
         }
         #endregion
 
@@ -54,12 +54,12 @@ namespace Entidades
         #endregion
 
         #region Operadores
-        public static bool operator ==(Profesor i, EClases clase)
+        public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
             return true;
         }
 
-        public static bool operator !=(Profesor i, EClases clase)
+        public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
             return !(i == clase);
         }

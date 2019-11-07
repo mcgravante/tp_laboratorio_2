@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace EntidadesAbstractas
 {
@@ -24,7 +26,7 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.apellido = value;
+                this.apellido = ValidarNombreApellido(value);
             }
         }
         public int DNI
@@ -35,7 +37,10 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.dni = value;
+
+                this.dni = ValidarDni(this.nacionalidad, value);
+
+
             }
         }
         public ENacionalidad Nacionalidad
@@ -57,14 +62,14 @@ namespace EntidadesAbstractas
             }
             set
             {
-                this.nombre = value;
+                this.nombre = ValidarNombreApellido(value);
             }
         }
         public string StringToDNI
         {
             set
             {
-                int.TryParse(value, out this.dni);
+                this.dni = ValidarDni(this.nacionalidad, value);
             }
         }
         #endregion
@@ -99,21 +104,42 @@ namespace EntidadesAbstractas
 
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
-            return 1;
+            if (dni < 1 || dni > 99999999)
+            {
+                throw new DniInvalidoException("DNI fuera de rango");
+            }
+            else if (nacionalidad.Equals(ENacionalidad.Extranjero) && dni < 90000000)
+            {
+                throw new NacionalidadInvalidaException("No corresponde la nacionalidad");
+            }
+            else if (nacionalidad.Equals(ENacionalidad.Argentino) && dni > 89999999)
+            {
+                throw new NacionalidadInvalidaException("No corresponde la nacionalidad");
+            }
+            return dni;
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
-            return 1;
+            if (!int.TryParse(dato, out int dni))
+            {
+                throw new DniInvalidoException("DNI inválido", e);
+            }
+            return ValidarDni(nacionalidad, dni);
         }
+
 
         private string ValidarNombreApellido(string dato)
         {
-            return "a completar";
+
+            string val = "^[A-Za-zÀ-ú\x20\x2D\x27]";
+            if (!Regex.IsMatch(dato, val))
+                dato = "";
+            return dato;
         }
         #endregion
 
-        #region Enumaradores
+        #region Enumeradores
         public enum ENacionalidad
         {
             Argentino, Extranjero

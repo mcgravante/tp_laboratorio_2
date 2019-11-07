@@ -11,7 +11,7 @@ namespace Entidades
     {
         #region Campos
         private List<Alumno> alumnos;
-        private EClases clase;
+        private Universidad.EClases clase;
         private Profesor instructor;
         #endregion
 
@@ -28,7 +28,7 @@ namespace Entidades
             }
         }
 
-        public EClases Clase
+        public Universidad.EClases Clase
         {
             get
             {
@@ -57,7 +57,7 @@ namespace Entidades
         private Jornada()
         { }
 
-        public Jornada(EClases clase, Profesor instructor) : this()
+        public Jornada(Universidad.EClases clase, Profesor instructor) : this()
         {
             this.clase = clase;
             this.instructor = instructor;
@@ -65,12 +65,12 @@ namespace Entidades
         #endregion
 
         #region Métodos
-        public bool Guardar(Jornada jornada)
+        public static bool Guardar(Jornada jornada)
         {
             return true;
         }
 
-        public string Leer()
+        public static string Leer()
         {
             return "a completar";
         }

@@ -60,7 +60,7 @@ namespace Entidades
         }
         #endregion
 
-        #region Enumaradores
+        #region Enumeradores
         public enum EEstadoCuenta
         {
             AlDia, Deudor, Becado
