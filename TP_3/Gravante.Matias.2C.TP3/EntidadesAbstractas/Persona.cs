@@ -79,14 +79,14 @@ namespace EntidadesAbstractas
 
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad) : this()
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.nacionalidad = nacionalidad;
+            this.Nombre = nombre;
+            this.Apellido = apellido;
+            this.Nacionalidad = nacionalidad;
         }
 
         public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
         {
-            this.dni = dni;
+            this.DNI = dni;
         }
 
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre, apellido, nacionalidad)
@@ -99,7 +99,12 @@ namespace EntidadesAbstractas
         override
         public string ToString()
         {
-            return "a completar";
+            StringBuilder retorno = new StringBuilder();
+            retorno.AppendLine("NOMBRE COMPLETO: ");
+            retorno.Append(this.Apellido + ", " + this.Nombre);
+            retorno.Append("\r\nNACIONALIDAD: ");
+            retorno.Append(this.Nacionalidad);
+            return retorno.ToString();
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
@@ -110,11 +115,11 @@ namespace EntidadesAbstractas
             }
             else if (nacionalidad.Equals(ENacionalidad.Extranjero) && dni < 90000000)
             {
-                throw new NacionalidadInvalidaException("No corresponde la nacionalidad");
+                throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
             }
             else if (nacionalidad.Equals(ENacionalidad.Argentino) && dni > 89999999)
             {
-                throw new NacionalidadInvalidaException("No corresponde la nacionalidad");
+                throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
             }
             return dni;
         }
@@ -123,7 +128,7 @@ namespace EntidadesAbstractas
         {
             if (!int.TryParse(dato, out int dni))
             {
-                throw new DniInvalidoException("DNI inválido", e);
+                throw new DniInvalidoException("DNI inválido");
             }
             return ValidarDni(nacionalidad, dni);
         }

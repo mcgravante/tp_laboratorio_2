@@ -10,7 +10,7 @@ namespace Entidades
     public sealed class Profesor : Universitario
     {
         #region Campos
-        private static Queue<Universidad.EClases> clasesDelDia;
+        private Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
         #endregion
 
@@ -27,36 +27,55 @@ namespace Entidades
             : base(id, nombre, apellido, dni, nacionalidad)
         {
             clasesDelDia = new Queue<Universidad.EClases>();
+            _randomClases();
+            _randomClases();
         }
         #endregion
 
         #region Métodos
         private void _randomClases()
-        { }
+        {
+            this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(1, 4));
+        }
 
         override
         protected string MostrarDatos()
         {
-            return "a completar";
+            StringBuilder retorno = new StringBuilder();
+            retorno.AppendLine(base.ToString());
+            retorno.Append("\r\n");
+            retorno.Append(this.ParticiparEnClase());
+            return retorno.ToString();
         }
 
         override
         public string ToString()
         {
-            return "a completar";
+            return this.MostrarDatos();
         }
 
         override
         protected string ParticiparEnClase()
         {
-            return "a completar";
+            StringBuilder retorno = new StringBuilder();
+            retorno.AppendLine("CLASES DEL DÍA: ");
+            foreach (Universidad.EClases clase in this.clasesDelDia)
+            {
+                retorno.Append("\r\n");
+                retorno.Append(clase);
+            }
+            return retorno.ToString();
         }
         #endregion
 
         #region Operadores
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
-            return true;
+            if (i.clasesDelDia.Contains(clase))
+            {
+                return true;
+            }
+            return false;
         }
 
         public static bool operator !=(Profesor i, Universidad.EClases clase)

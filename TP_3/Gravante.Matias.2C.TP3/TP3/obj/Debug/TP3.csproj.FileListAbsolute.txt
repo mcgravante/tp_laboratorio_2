@@ -1,0 +1,16 @@
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\obj\Debug\TP3.csprojAssemblyReference.cache
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\obj\Debug\TP3.csproj.CoreCompileInputs.cache
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\TP3.exe.config
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\TP3.exe
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\TP3.pdb
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\Archivos.dll
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\Entidades.dll
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\EntidadesAbstractas.dll
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\Excepciones.dll
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\Archivos.pdb
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\EntidadesAbstractas.pdb
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\Entidades.pdb
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\bin\Debug\Excepciones.pdb
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\obj\Debug\TP3.csproj.CopyComplete
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\obj\Debug\TP3.exe
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\TP3\obj\Debug\TP3.pdb

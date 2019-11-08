@@ -32,26 +32,40 @@ namespace Entidades
         override
         protected string MostrarDatos()
         {
-            return "a completar";
+            StringBuilder retorno = new StringBuilder();
+            retorno.AppendLine(base.ToString());
+            retorno.Append("\r\n");
+            retorno.Append("ESTADO DE CUENTA: ");
+            retorno.Append(this.estadoCuenta);
+            retorno.Append(this.ParticiparEnClase());
+            return retorno.ToString();
         }
 
         override
         protected string ParticiparEnClase()
         {
-            return "a completar";
+            StringBuilder retorno = new StringBuilder();
+            retorno.Append("\r\nTOMA CLASES DE: ");
+            retorno.Append(this.claseQueToma);
+            return retorno.ToString();
         }
 
         override
         public string ToString()
         {
-            return "a completar";
+            return this.MostrarDatos();
         }
         #endregion
 
         #region Operadores
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
-            return true;
+            if (a.ParticiparEnClase().Equals(clase)
+                && !a.estadoCuenta.Equals(EEstadoCuenta.Deudor))
+            {
+                return true;
+            }
+            return false;
         }
 
         public static bool operator !=(Alumno a, Universidad.EClases clase)

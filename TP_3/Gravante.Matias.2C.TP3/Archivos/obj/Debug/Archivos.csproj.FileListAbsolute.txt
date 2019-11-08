@@ -1,0 +1,6 @@
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\bin\Debug\Archivos.dll
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\bin\Debug\Archivos.pdb
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.dll
+D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.pdb
