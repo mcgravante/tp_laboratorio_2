@@ -9,7 +9,7 @@ namespace Excepciones
     public class ArchivosException : Exception
     {
         #region Constructores
-        public ArchivosException(Exception innerException) : base("Archivo no se guardó",innerException)
+        public ArchivosException(Exception innerException) : base("Archivo no se guardó o no se escribió", innerException)
         { }
         #endregion
     }

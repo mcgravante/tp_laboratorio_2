@@ -2,6 +2,7 @@
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using Excepciones;
 
 namespace Archivos
 {
@@ -22,8 +23,9 @@ namespace Archivos
                     serializer.Serialize(writer, datos);
                     retorno = true;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
+                    throw new ArchivosException(e);
                 }
                 finally
                 {
@@ -49,8 +51,9 @@ namespace Archivos
                     datos = (T)serializador.Deserialize(lector);
                     retorno = true;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
+                    throw new ArchivosException(e);
                 }
                 finally
                 {

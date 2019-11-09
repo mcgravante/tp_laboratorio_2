@@ -110,7 +110,7 @@ namespace Entidades
                     return p;
                 }
             }
-            throw new SinProfesorException("No hay Profesor para la clase.");
+            throw new SinProfesorException();
         }
 
         public static Profesor operator !=(Universidad u, EClases clase)
@@ -133,7 +133,7 @@ namespace Entidades
             }
             else
             {
-                throw new AlumnoRepetidoException("Alumno repetido.");
+                throw new AlumnoRepetidoException();
             }
             return u;
         }
@@ -175,7 +175,7 @@ namespace Entidades
         {
             Universidad retorno = null;
             Xml<Universidad> xml = new Xml<Universidad>();
-            xml.Leer(AppDomain.CurrentDomain.BaseDirectory + "Universidad.txt", out retorno);
+            xml.Leer(AppDomain.CurrentDomain.BaseDirectory + "Universidad.xml", out retorno);
             return retorno;
         }
 
