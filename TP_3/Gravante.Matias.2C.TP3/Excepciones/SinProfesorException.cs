@@ -11,6 +11,8 @@ namespace Excepciones
         #region Constructores
         public SinProfesorException() : base()
         { }
+        public SinProfesorException(string message) : base(message)
+        { }
         #endregion
     }
 }

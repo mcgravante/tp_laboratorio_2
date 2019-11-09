@@ -4,3 +4,12 @@ D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Arch
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.dll
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\bin\Debug\Archivos.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\bin\Debug\Archivos.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csprojAssemblyReference.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\bin\Debug\Excepciones.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\bin\Debug\Excepciones.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Archivos\obj\Debug\Archivos.csproj.CopyComplete

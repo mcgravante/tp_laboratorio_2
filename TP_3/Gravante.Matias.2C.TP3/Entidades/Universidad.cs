@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EntidadesAbstractas;
+using Excepciones;
+using Archivos;
 
 namespace Entidades
 {
@@ -65,13 +66,21 @@ namespace Entidades
         #region Constructotres
         public Universidad()
         {
+            this.Alumnos = new List<Alumno>();
+            this.Instructores = new List<Profesor>();
+            this.Jornadas = new List<Jornada>();
         }
         #endregion
 
         #region Operadores
         public static bool operator ==(Universidad g, Alumno a)
         {
-            return true;
+            foreach (Alumno alumno in g.Alumnos)
+                if (alumno == a)
+                {
+                    return true;
+                }
+            return false;
         }
 
         public static bool operator !=(Universidad g, Alumno a)
@@ -80,33 +89,73 @@ namespace Entidades
         }
         public static bool operator ==(Universidad g, Profesor i)
         {
-            return true;
+            foreach (Profesor profesor in g.Instructores)
+                if (profesor == i)
+                {
+                    return true;
+                }
+            return false;
         }
 
         public static bool operator !=(Universidad g, Profesor i)
         {
             return !(g == i);
         }
-        public static bool operator ==(Universidad u, EClases clase)
+        public static Profesor operator ==(Universidad u, EClases clase)
         {
-            return true;
+            foreach (Profesor p in u.profesores)
+            {
+                if (p == clase)
+                {
+                    return p;
+                }
+            }
+            throw new SinProfesorException("No hay Profesor para la clase.");
         }
 
-        public static bool operator !=(Universidad u, EClases clase)
+        public static Profesor operator !=(Universidad u, EClases clase)
         {
-            return !(u == clase);
+            foreach (Profesor p in u.profesores)
+            {
+                if (p != clase)
+                {
+                    return p;
+                }
+            }
+            throw new SinProfesorException();
         }
 
         public static Universidad operator +(Universidad u, Alumno a)
         {
+            if (u != a)
+            {
+                u.Alumnos.Add(a);
+            }
+            else
+            {
+                throw new AlumnoRepetidoException("Alumno repetido.");
+            }
             return u;
         }
         public static Universidad operator +(Universidad u, Profesor i)
         {
+            if (u != i)
+            {
+                u.Instructores.Add(i);
+            }
             return u;
         }
         public static Universidad operator +(Universidad g, EClases clase)
         {
+            Jornada jornada = new Jornada(clase, g == clase);
+            foreach (Alumno alumno in g.Alumnos)
+            {
+                if (alumno == clase)
+                {
+                    jornada.Alumnos.Add(alumno);
+                }
+            }
+            g.Jornadas.Add(jornada);
             return g;
         }
         #endregion
@@ -114,23 +163,37 @@ namespace Entidades
         #region Métodos
         public static bool Guardar(Universidad uni)
         {
-            return true;
+            bool retorno = false;
+            if (!(uni is null))
+            {
+                Xml<Universidad> xml = new Xml<Universidad>();
+                retorno = xml.Guardar(AppDomain.CurrentDomain.BaseDirectory + "Universidad.xml", uni);
+            }
+            return retorno;
         }
-
         public static Universidad Leer()
         {
-            return new Universidad();
+            Universidad retorno = null;
+            Xml<Universidad> xml = new Xml<Universidad>();
+            xml.Leer(AppDomain.CurrentDomain.BaseDirectory + "Universidad.txt", out retorno);
+            return retorno;
         }
 
-        private string MostrarDatos(Universidad uni)
+        private static string MostrarDatos(Universidad uni)
         {
-            return "a completar";
+            StringBuilder retorno = new StringBuilder();
+            retorno.AppendLine("JORNADA: ");
+            foreach (Jornada jornada in uni.Jornadas)
+            {
+                retorno.Append(jornada.ToString());
+            }
+            return retorno.ToString();
         }
 
         override
         public string ToString()
         {
-            return "a completar";
+            return MostrarDatos(this);
         }
         #endregion
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using EntidadesAbstractas;
 
 namespace Entidades
@@ -33,8 +29,8 @@ namespace Entidades
         protected string MostrarDatos()
         {
             StringBuilder retorno = new StringBuilder();
-            retorno.AppendLine(base.ToString());
-            retorno.Append("\r\n");
+            retorno.AppendLine(base.MostrarDatos());
+            retorno.AppendLine("");
             retorno.Append("ESTADO DE CUENTA: ");
             retorno.Append(this.estadoCuenta);
             retorno.Append(this.ParticiparEnClase());
@@ -45,7 +41,8 @@ namespace Entidades
         protected string ParticiparEnClase()
         {
             StringBuilder retorno = new StringBuilder();
-            retorno.Append("\r\nTOMA CLASES DE: ");
+            retorno.AppendLine("");
+            retorno.Append("TOMA CLASES DE: ");
             retorno.Append(this.claseQueToma);
             return retorno.ToString();
         }
@@ -60,7 +57,7 @@ namespace Entidades
         #region Operadores
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
-            if (a.ParticiparEnClase().Equals(clase)
+            if (a.claseQueToma.Equals(clase)
                 && !a.estadoCuenta.Equals(EEstadoCuenta.Deudor))
             {
                 return true;

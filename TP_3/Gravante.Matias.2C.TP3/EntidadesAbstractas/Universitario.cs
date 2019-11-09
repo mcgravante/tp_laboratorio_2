@@ -15,7 +15,7 @@ namespace EntidadesAbstractas
         #region Constructores
         public Universitario() : base()
         { }
-        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(nombre, apellido, nacionalidad)
+        public Universitario(int legajo, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(nombre, apellido, dni, nacionalidad)
         {
             this.legajo = legajo;
         }
@@ -36,7 +36,7 @@ namespace EntidadesAbstractas
         {
             StringBuilder retorno = new StringBuilder();
             retorno.AppendLine(base.ToString());
-            retorno.Append("\r\n");
+            retorno.AppendLine("");
             retorno.Append("LEGAJO NÚMERO: ");
             retorno.Append(this.legajo);
             return retorno.ToString();

@@ -9,3 +9,16 @@ D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\Exc
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.dll
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\Entidades.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\EntidadesAbstractas.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\Excepciones.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\Excepciones.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\obj\Debug\Entidades.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\Archivos.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\Entidades\bin\Debug\Archivos.pdb

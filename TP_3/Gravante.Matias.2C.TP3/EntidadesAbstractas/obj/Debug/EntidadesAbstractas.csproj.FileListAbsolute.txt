@@ -7,3 +7,12 @@ D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.csproj.CopyComplete
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.dll
 D:\gravante\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\EntidadesAbstractas.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\Excepciones.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\bin\Debug\Excepciones.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.csprojAssemblyReference.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.csproj.CopyComplete
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_3\Gravante.Matias.2C.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.pdb

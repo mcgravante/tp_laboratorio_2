@@ -11,6 +11,9 @@ namespace Excepciones
         #region Constructores
         public AlumnoRepetidoException() : base()
         { }
+
+        public AlumnoRepetidoException(string message) : base(message)
+        { }
         #endregion
     }
 }

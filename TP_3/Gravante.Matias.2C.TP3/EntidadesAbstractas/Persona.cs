@@ -100,28 +100,29 @@ namespace EntidadesAbstractas
         public string ToString()
         {
             StringBuilder retorno = new StringBuilder();
-            retorno.AppendLine("NOMBRE COMPLETO: ");
+            retorno.Append("NOMBRE COMPLETO: ");
             retorno.Append(this.Apellido + ", " + this.Nombre);
-            retorno.Append("\r\nNACIONALIDAD: ");
+            retorno.AppendLine("");
+            retorno.Append("NACIONALIDAD: ");
             retorno.Append(this.Nacionalidad);
             return retorno.ToString();
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
-            if (dni < 1 || dni > 99999999)
+            if (dato < 1 || dato > 99999999)
             {
                 throw new DniInvalidoException("DNI fuera de rango");
             }
-            else if (nacionalidad.Equals(ENacionalidad.Extranjero) && dni < 90000000)
+            else if (nacionalidad.Equals(ENacionalidad.Extranjero) && dato < 90000000)
             {
                 throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
             }
-            else if (nacionalidad.Equals(ENacionalidad.Argentino) && dni > 89999999)
+            else if (nacionalidad.Equals(ENacionalidad.Argentino) && dato > 89999999)
             {
                 throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
             }
-            return dni;
+            return dato;
         }
 
         private int ValidarDni(ENacionalidad nacionalidad, string dato)

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntidadesAbstractas;
+using Excepciones;
+using Archivos;
+using System.IO;
+
 
 namespace Entidades
 {
@@ -69,32 +73,41 @@ namespace Entidades
         #region Métodos
         public static bool Guardar(Jornada jornada)
         {
-            return true;
+            Texto txt = new Texto();
+            bool retorno = false;
+            if (!(txt is null && jornada is null))
+            {
+                retorno = txt.Guardar(AppDomain.CurrentDomain.BaseDirectory + "\\Jornada.txt", jornada.ToString());
+            }
+            return retorno;
         }
-
         public static string Leer()
         {
-            return "a completar";
+            Texto txt = new Texto();
+            string retorno = "";
+            if (!(txt is null))
+            {
+                txt.Leer(AppDomain.CurrentDomain.BaseDirectory + "\\Jornada.txt", out retorno);
+            }
+            return retorno;
         }
 
         override
         public string ToString()
         {
             StringBuilder retorno = new StringBuilder();
-            retorno.AppendLine("JORNADA: ");
-            retorno.Append("\r\n");
             retorno.Append("CLASE DE ");
             retorno.Append(this.clase);
-            retorno.Append("POR ");
+            retorno.Append(" POR ");
             retorno.Append(this.instructor.ToString());
-            retorno.Append("\r\n");
-            retorno.Append("ALUMNOS: ");
-            retorno.Append("\r\n");
+            retorno.AppendLine("");
+            retorno.AppendLine("ALUMNOS: ");
             foreach (Alumno alumno in this.Alumnos)
             {
-                retorno.Append("\r\n");
-                retorno.Append(alumno);
+                retorno.AppendLine(alumno.ToString());
             }
+            retorno.AppendLine("<--------------------------------->");
+            retorno.AppendLine("");
             return retorno.ToString();
         }
         #endregion

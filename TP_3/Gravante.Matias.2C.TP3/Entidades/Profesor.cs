@@ -42,8 +42,7 @@ namespace Entidades
         protected string MostrarDatos()
         {
             StringBuilder retorno = new StringBuilder();
-            retorno.AppendLine(base.ToString());
-            retorno.Append("\r\n");
+            retorno.AppendLine(base.MostrarDatos());
             retorno.Append(this.ParticiparEnClase());
             return retorno.ToString();
         }
@@ -61,8 +60,7 @@ namespace Entidades
             retorno.AppendLine("CLASES DEL DÍA: ");
             foreach (Universidad.EClases clase in this.clasesDelDia)
             {
-                retorno.Append("\r\n");
-                retorno.Append(clase);
+                retorno.AppendLine(clase.ToString());
             }
             return retorno.ToString();
         }
