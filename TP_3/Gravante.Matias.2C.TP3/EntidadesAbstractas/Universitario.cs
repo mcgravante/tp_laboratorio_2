@@ -22,6 +22,12 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Métodos
+
+        /// <summary>
+        /// Verifica si ambos objetos son de tipo Universitario
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         override
         public bool Equals(Object obj)
         {
@@ -32,6 +38,10 @@ namespace EntidadesAbstractas
             return false;
         }
 
+        /// <summary>
+        ///  retornará todos los datos del Universitario
+        /// </summary>
+        /// <returns></returns>
         protected virtual string MostrarDatos()
         {
             StringBuilder retorno = new StringBuilder();
@@ -46,6 +56,13 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Operadores
+        /// <summary>
+        /// Dos Universitario serán iguales si y sólo si son del mismo Tipo 
+        /// y su Legajo o DNI son iguales
+        /// </summary>
+        /// <param name="pg1"></param>
+        /// <param name="pg2"></param>
+        /// <returns></returns>
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             if (pg1.Equals(pg2) &&

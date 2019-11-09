@@ -58,6 +58,9 @@ namespace Entidades
         #endregion
 
         #region Constructores
+        /// <summary>
+        /// Se inicializará la lista de alumnos en el constructor por defecto
+        /// </summary>
         private Jornada()
         {
             this.alumnos = new List<Alumno>();
@@ -71,6 +74,11 @@ namespace Entidades
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// guardará los datos de la Jornada en un archivo de texto
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <returns></returns>
         public static bool Guardar(Jornada jornada)
         {
             Texto txt = new Texto();
@@ -81,6 +89,11 @@ namespace Entidades
             }
             return retorno;
         }
+
+        /// <summary>
+        ///  retornará los datos de la Jornada como texto
+        /// </summary>
+        /// <returns></returns>
         public static string Leer()
         {
             Texto txt = new Texto();
@@ -92,6 +105,10 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        ///  mostrará todos los datos de la Jornada
+        /// </summary>
+        /// <returns></returns>
         override
         public string ToString()
         {
@@ -113,6 +130,12 @@ namespace Entidades
         #endregion
 
         #region Operadores
+        /// <summary>
+        ///  Una Jornada será igual a un Alumno si el mismo participa de la clase
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             if (a == j.clase)
@@ -127,6 +150,13 @@ namespace Entidades
             return !(j == a);
         }
 
+        /// <summary>
+        /// Agregar Alumnos a la clase por medio del operador +, 
+        /// validando que no estén previamente cargados
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Jornada operator +(Jornada j, Alumno a)
         {
             if (!j.Alumnos.Contains(a))

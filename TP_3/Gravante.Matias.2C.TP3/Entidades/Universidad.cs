@@ -50,6 +50,12 @@ namespace Entidades
                 this.jornada = value;
             }
         }
+
+        /// <summary>
+        /// Se accederá a una Jornada específica a través de un indexado
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
         public Jornada this[int i]
         {
             get
@@ -73,6 +79,13 @@ namespace Entidades
         #endregion
 
         #region Operadores
+
+        /// <summary>
+        /// Un Universidad será igual a un Alumno si el mismo está inscripto en él
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static bool operator ==(Universidad g, Alumno a)
         {
             foreach (Alumno alumno in g.Alumnos)
@@ -87,6 +100,13 @@ namespace Entidades
         {
             return !(g == a);
         }
+
+        /// <summary>
+        /// Un Universidad será igual a un Profesor si el mismo está dando clases en él
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
         public static bool operator ==(Universidad g, Profesor i)
         {
             foreach (Profesor profesor in g.Instructores)
@@ -101,6 +121,14 @@ namespace Entidades
         {
             return !(g == i);
         }
+
+        /// <summary>
+        ///  retornará el primer Profesor capaz de dar esa clase. 
+        ///  Sino, lanzará la Excepción SinProfesorException
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static Profesor operator ==(Universidad u, EClases clase)
         {
             foreach (Profesor p in u.profesores)
@@ -113,6 +141,12 @@ namespace Entidades
             throw new SinProfesorException();
         }
 
+        /// <summary>
+        ///  retornará el primer Profesor que no pueda dar la clase
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static Profesor operator !=(Universidad u, EClases clase)
         {
             foreach (Profesor p in u.profesores)
@@ -125,6 +159,13 @@ namespace Entidades
             throw new SinProfesorException();
         }
 
+        /// <summary>
+        /// Se agregarán Alumnos y Profesores mediante el operador +, 
+        /// validando que no estén previamente cargados
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad u, Alumno a)
         {
             if (u != a)
@@ -137,6 +178,14 @@ namespace Entidades
             }
             return u;
         }
+
+        /// <summary>
+        /// Se agregarán Alumnos y Profesores mediante el operador +, 
+        /// validando que no estén previamente cargados
+        /// </summary>
+        /// <param name="u"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad u, Profesor i)
         {
             if (u != i)
@@ -145,6 +194,15 @@ namespace Entidades
             }
             return u;
         }
+
+        /// <summary>
+        /// Al agregar una clase a un Universidad se deberá generar y agregar una nueva Jornada 
+        /// indicando la clase, un Profesor que pueda darla (según su atributo ClasesDelDia) 
+        /// y la lista de alumnos que la toman (todos los que coincidan en su campo ClaseQueToma)
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad g, EClases clase)
         {
             Jornada jornada = new Jornada(clase, g == clase);
@@ -161,6 +219,13 @@ namespace Entidades
         #endregion
 
         #region Métodos
+
+        /// <summary>
+        /// serializará los datos del Universidad en un XML, 
+        /// incluyendo todos los datos de sus Profesores, Alumnos y Jornadas
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns></returns>
         public static bool Guardar(Universidad uni)
         {
             bool retorno = false;
@@ -171,6 +236,11 @@ namespace Entidades
             }
             return retorno;
         }
+
+        /// <summary>
+        ///  retornará un Universidad con todos los datos previamente serializados
+        /// </summary>
+        /// <returns></returns>
         public static Universidad Leer()
         {
             Universidad retorno = null;
@@ -190,6 +260,10 @@ namespace Entidades
             return retorno.ToString();
         }
 
+        /// <summary>
+        /// Hará públicos los datos de la Universidad.
+        /// </summary>
+        /// <returns></returns>
         override
         public string ToString()
         {

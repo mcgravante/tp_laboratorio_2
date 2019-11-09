@@ -96,6 +96,11 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Métodos
+
+        /// <summary>
+        /// ToString retornará los datos de la Persona
+        /// </summary>
+        /// <returns></returns>
         override
         public string ToString()
         {
@@ -108,11 +113,17 @@ namespace EntidadesAbstractas
             return retorno.ToString();
         }
 
+        /// <summary>
+        /// Validar que el DNI sea correcto, teniendo en cuenta su nacionalidad. 
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             if (dato < 1 || dato > 99999999)
             {
-                throw new DniInvalidoException("DNI fuera de rango");
+                throw new DniInvalidoException();
             }
             else if (nacionalidad.Equals(ENacionalidad.Extranjero) && dato < 90000000)
             {
@@ -125,6 +136,12 @@ namespace EntidadesAbstractas
             return dato;
         }
 
+        /// <summary>
+        /// Verificar si el DNI presenta un error de formato (más caracteres de los permitidos, letras, etc.)  
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             if (!int.TryParse(dato, out int dni))
@@ -134,7 +151,12 @@ namespace EntidadesAbstractas
             return ValidarDni(nacionalidad, dni);
         }
 
-
+        /// <summary>
+        /// Validará que los nombres sean cadenas con caracteres válidos para nombres. 
+        /// Caso contrario, no se cargará
+        /// </summary>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private string ValidarNombreApellido(string dato)
         {
 

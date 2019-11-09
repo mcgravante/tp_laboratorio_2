@@ -9,20 +9,20 @@ namespace Excepciones
     public class DniInvalidoException : Exception
     {
         #region Campos
-        private string mensajeBase;
+        private static string mensajeBase = "DNI Inválido";
         #endregion
 
         #region Constructores
-        public DniInvalidoException() : base()
+        public DniInvalidoException() : base(mensajeBase)
         { }
 
-        public DniInvalidoException(Exception e) : this()
+        public DniInvalidoException(Exception e) : base(mensajeBase, e)
         { }
 
-        public DniInvalidoException(string message) : this()
+        public DniInvalidoException(string message) : base(message)
         { }
 
-        public DniInvalidoException(string message, Exception e) : this(message)
+        public DniInvalidoException(string message, Exception e) : base(message, e)
         { }
         #endregion
     }

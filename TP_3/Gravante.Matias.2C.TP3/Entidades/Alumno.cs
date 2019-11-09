@@ -25,6 +25,10 @@ namespace Entidades
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// Sobreescribirá el método MostrarDatos con todos los datos del alumno
+        /// </summary>
+        /// <returns></returns>
         override
         protected string MostrarDatos()
         {
@@ -37,6 +41,11 @@ namespace Entidades
             return retorno.ToString();
         }
 
+        /// <summary>
+        /// e retornará la cadena "TOMA CLASE DE " 
+        /// junto al nombre de la clase que toma. 
+        /// </summary>
+        /// <returns></returns>
         override
         protected string ParticiparEnClase()
         {
@@ -47,6 +56,10 @@ namespace Entidades
             return retorno.ToString();
         }
 
+        /// <summary>
+        ///  hará públicos los datos del Alumno. 
+        /// </summary>
+        /// <returns></returns>
         override
         public string ToString()
         {
@@ -55,6 +68,14 @@ namespace Entidades
         #endregion
 
         #region Operadores
+        /// <summary>
+        /// Un Alumno será igual a un EClase si toma esa clase 
+        /// y su estado de cuenta no es Deudor.
+        /// Un Alumno será distinto a un EClase sólo si no toma esa clase
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
             if (a.claseQueToma.Equals(clase)
