@@ -30,5 +30,10 @@ namespace MainCorreo
         {
 
         }
+
+        private void btnMostrarTodos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

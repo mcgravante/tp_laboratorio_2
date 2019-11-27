@@ -92,11 +92,8 @@ namespace Entidades
         public event DelegadoEstado InformaEstado;
         #endregion
 
-        #region Enumeradores
-        public enum DelegadoEstado
-        {
-            Delegado
-        }
+        #region Tipos anidados
+        public delegate void DelegadoEstado();
 
         public enum EEstado
         {
