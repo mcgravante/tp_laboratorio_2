@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    public delegate void DelegadoSqlException(string msg);
+
     public static class PaqueteDAO
     {
         #region Campos
@@ -16,14 +18,50 @@ namespace Entidades
 
         #region Constructores
         static PaqueteDAO()
-        { }
+        {
+            SqlConnectionStringBuilder sqlConnectionString = new SqlConnectionStringBuilder();
+            sqlConnectionString.DataSource = ".\\SQLEXPRESS";
+            sqlConnectionString.InitialCatalog = "correo-sp-2017";
+            sqlConnectionString.IntegratedSecurity = true;
+            conexion = new SqlConnection(sqlConnectionString.ToString());
+            comando = new SqlCommand();
+            comando.Connection = conexion;
+            comando.CommandType = System.Data.CommandType.Text;
+        }
         #endregion
 
         #region Métodos
         public static bool Insertar(Paquete p)
         {
-            return false;
+            bool ret = false;
+            if (p is null)
+            {
+                return ret;
+            }
+            comando.CommandText = String.Format($"INSERT INTO dbo.Paquetes(direccionEntrega,trackingID,alumno) VALUES('{p.DireccionEntrega}','{p.TrackingID}','Matias Gravante')");
+            try
+            {
+                conexion.Open();
+                if (comando.ExecuteNonQuery() != 0)
+                {
+                    ret = true;
+                }
+            }
+            catch (Exception e)
+            {
+                sqlError.Invoke(e.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+            return ret;
         }
+        #endregion
+
+        #region Eventos
+        public static event DelegadoSqlException sqlError;
         #endregion
     }
 }
+

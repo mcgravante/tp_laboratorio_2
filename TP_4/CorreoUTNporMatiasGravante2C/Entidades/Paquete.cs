@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Entidades
@@ -57,28 +58,38 @@ namespace Entidades
         {
             this.DireccionEntrega = direccionEntrega;
             this.TrackingID = trackingID;
+            this.estado = EEstado.Ingresado;
         }
         #endregion
 
         #region Métodos
         public void MockCicloDeVida()
-        { }
+        {
+            do
+            {
+                Thread.Sleep(4000);
+                this.estado++;
+                this.InformaEstado.Invoke(this, new EventArgs());
+            }
+            while (this.estado != EEstado.Entregado);
+            PaqueteDAO.Insertar(this);
+        }
 
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
-            return "a completar";
+            return String.Format("{0} para {1}", ((Paquete)elemento).trackingID, ((Paquete)elemento).direccionEntrega);
         }
 
         public string ToString()
         {
-            return "a completar";
+            return this.MostrarDatos(this);
         }
         #endregion
 
         #region Operadores
         public static bool operator ==(Paquete p1, Paquete p2)
         {
-            return false;
+            return (p1.trackingID == p2.trackingID);
         }
 
         public static bool operator !=(Paquete p1, Paquete p2)
@@ -93,7 +104,7 @@ namespace Entidades
         #endregion
 
         #region Tipos anidados
-        public delegate void DelegadoEstado();
+        public delegate void DelegadoEstado(Object sender, EventArgs e);
 
         public enum EEstado
         {

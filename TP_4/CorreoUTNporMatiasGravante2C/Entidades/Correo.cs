@@ -30,23 +30,58 @@ namespace Entidades
 
         #region Constructores
         public Correo()
-        { }
+        {
+            this.paquetes = new List<Paquete>();
+            this.mockPaquetes = new List<Thread>();
+        }
         #endregion
 
         #region Métodos
         public void FinEntregas()
-        { }
+        {
+            foreach (Thread item in this.mockPaquetes)
+            {
+                if (item != null && item.IsAlive)
+                {
+                    item.Abort();
+                }
+            }
+        }
 
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
-            return "a completar";
+            Correo correo = (Correo)elementos;
+            string ret = "";
+            foreach (Paquete item in correo.paquetes)
+            {
+                ret += String.Format("\n{0} para {1} ({2})", item.TrackingID, item.DireccionEntrega, item.Estado.ToString());
+            }
+            return ret;
         }
         #endregion
 
         #region Operadores
         public static Correo operator +(Correo c, Paquete p)
         {
-            return new Correo();
+            foreach (Paquete paquete in c.paquetes)
+            {
+                if (paquete == p)
+                {
+                    throw new TrackingIdRepetidoException($"El paquete {p.TrackingID} ya se encuentra cargado");
+                }
+            }
+            c.paquetes.Add(p);
+            Thread t1 = new Thread(p.MockCicloDeVida);
+            c.mockPaquetes.Add(t1);
+            try
+            {
+                t1.Start();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("No se pudo iniciar el thread ", e);
+            }
+            return c;
         }
         #endregion
     }
