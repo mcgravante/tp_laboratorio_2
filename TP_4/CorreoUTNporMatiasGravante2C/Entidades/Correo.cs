@@ -37,6 +37,9 @@ namespace Entidades
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// cerrará todos los hilos activos.
+        /// </summary>
         public void FinEntregas()
         {
             foreach (Thread item in this.mockPaquetes)
@@ -48,6 +51,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        ///  retornar los datos de todos los paquetes de su lista.
+        /// </summary>
+        /// <param name="elementos"></param>
+        /// <returns></returns>
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             Correo correo = (Correo)elementos;
@@ -61,6 +69,14 @@ namespace Entidades
         #endregion
 
         #region Operadores
+        /// <summary>
+        /// De no estar repetido, agregar el paquete a la lista de paquetes
+        /// Crear un hilo para el método MockCicloDeVida del paquete, y agregar dicho hilo a mockPaquetes
+        /// Ejecutar el hilo
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public static Correo operator +(Correo c, Paquete p)
         {
             foreach (Paquete paquete in c.paquetes)
@@ -71,11 +87,11 @@ namespace Entidades
                 }
             }
             c.paquetes.Add(p);
-            Thread t1 = new Thread(p.MockCicloDeVida);
-            c.mockPaquetes.Add(t1);
+            Thread t = new Thread(p.MockCicloDeVida);
+            c.mockPaquetes.Add(t);
             try
             {
-                t1.Start();
+                t.Start();
             }
             catch (Exception e)
             {

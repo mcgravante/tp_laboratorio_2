@@ -63,6 +63,10 @@ namespace Entidades
         #endregion
 
         #region Métodos
+        /// <summary>
+        /// hará que el paquete cambie de estado
+        /// Finalmente guardar los datos del paquete en la base de datos
+        /// </summary>
         public void MockCicloDeVida()
         {
             do
@@ -75,18 +79,33 @@ namespace Entidades
             PaqueteDAO.Insertar(this);
         }
 
+        /// <summary>
+        /// Muestra información del paquete
+        /// </summary>
+        /// <param name="elemento"></param>
+        /// <returns></returns>
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
             return String.Format("{0} para {1}", ((Paquete)elemento).trackingID, ((Paquete)elemento).direccionEntrega);
         }
 
-        public string ToString()
+        /// <summary>
+        ///  retornará la información del paquete.
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
         {
             return this.MostrarDatos(this);
         }
         #endregion
 
         #region Operadores
+        /// <summary>
+        /// Dos paquetes serán iguales siempre y cuando su Tracking ID sea el mismo
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
         public static bool operator ==(Paquete p1, Paquete p2)
         {
             return (p1.trackingID == p2.trackingID);

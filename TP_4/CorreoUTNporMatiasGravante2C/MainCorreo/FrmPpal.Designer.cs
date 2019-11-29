@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnMostrarTodos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEstadoEntregado = new System.Windows.Forms.Label();
+            this.cmsListas = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblEstadoEnViaje = new System.Windows.Forms.Label();
             this.lblEstadoIngresado = new System.Windows.Forms.Label();
             this.lblTrackingID = new System.Windows.Forms.Label();
@@ -43,6 +46,7 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
+            this.cmsListas.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,11 +91,26 @@
             // lblEstadoEntregado
             // 
             this.lblEstadoEntregado.AutoSize = true;
+            this.lblEstadoEntregado.ContextMenuStrip = this.cmsListas;
             this.lblEstadoEntregado.Location = new System.Drawing.Point(256, 40);
             this.lblEstadoEntregado.Name = "lblEstadoEntregado";
             this.lblEstadoEntregado.Size = new System.Drawing.Size(46, 13);
             this.lblEstadoEntregado.TabIndex = 5;
             this.lblEstadoEntregado.Text = "En Viaje";
+            // 
+            // contextMenuStrip1
+            // 
+            this.cmsListas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarToolStripMenuItem});
+            this.cmsListas.Name = "contextMenuStrip1";
+            this.cmsListas.Size = new System.Drawing.Size(116, 26);
+            // 
+            // mostrarToolStripMenuItem
+            // 
+            this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.mostrarToolStripMenuItem.Text = "Mostrar";
+            this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.MostrarToolStripMenuItem_Click);
             // 
             // lblEstadoEnViaje
             // 
@@ -147,6 +166,7 @@
             // mtxtTrackingID
             // 
             this.mtxtTrackingID.Location = new System.Drawing.Point(16, 58);
+            this.mtxtTrackingID.Mask = "000-000-0000";
             this.mtxtTrackingID.Name = "mtxtTrackingID";
             this.mtxtTrackingID.Size = new System.Drawing.Size(140, 20);
             this.mtxtTrackingID.TabIndex = 12;
@@ -199,6 +219,7 @@
             this.Name = "FrmPpal";
             this.Text = "Correo UTN por Matias.Gravante.2C";
             this.Load += new System.EventHandler(this.FrmPpal_Load);
+            this.cmsListas.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -223,5 +244,7 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox rtbMostrar;
+        private System.Windows.Forms.ContextMenuStrip cmsListas;
+        private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem;
     }
 }

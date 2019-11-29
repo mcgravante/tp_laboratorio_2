@@ -31,6 +31,11 @@ namespace Entidades
         #endregion
 
         #region Métodos
+        /// <summary>
+        ///  se encargará de guardar los datos de un paquete en la base de datos generada 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public static bool Insertar(Paquete p)
         {
             bool ret = false;
