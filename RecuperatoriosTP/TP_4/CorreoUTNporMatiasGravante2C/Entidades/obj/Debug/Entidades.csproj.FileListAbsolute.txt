@@ -1,0 +1,6 @@
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\Entidades\bin\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\Entidades\bin\Debug\Entidades.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\Entidades\obj\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\Entidades\obj\Debug\Entidades.pdb

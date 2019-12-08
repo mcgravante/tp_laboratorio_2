@@ -1,0 +1,13 @@
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\bin\Debug\MainCorreo.exe.config
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\bin\Debug\MainCorreo.exe
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\bin\Debug\MainCorreo.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\bin\Debug\Entidades.dll
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\bin\Debug\Entidades.pdb
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.csprojAssemblyReference.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.FrmPpal.resources
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.Properties.Resources.resources
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.csproj.GenerateResource.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.csproj.CoreCompileInputs.cache
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.csproj.CopyComplete
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.exe
+C:\Users\matia\OneDrive\Escritorio\Programacion II\tp_laboratorio_2\TP_4\CorreoUTNporMatiasGravante2C\MainCorreo\obj\Debug\MainCorreo.pdb
